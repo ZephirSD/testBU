@@ -47,6 +47,7 @@ class AppCustomAuthAuthenticator extends AbstractLoginFormAuthenticator
         }
 
         // For example:
+        // Pour faire les redirections lors de la connexion
         return new RedirectResponse($this->urlGenerator->generate('app_reservation_index'));
         // throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
     }
