@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root{
+    --width100: 100%;
+    --height100: 100vh;
+    --bkColor1: #91D8AA;
+    --bkColor2: #30B6A2;
+    --bkButton: #3A837B;
+    --openSans: 'Open Sans', sans-serif;
+    --borderColorInput: #d2d2d2;
+    font-family: var(--openSans);
+}
+
+body{
+    background: linear-gradient(var(--bkColor1), var(--bkColor2));
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main.main_log{
+    width: var(--width100);
+    height: var(--height100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form.form_login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px;
+    width: 40vw;
+    height: 85vh;
+    position: relative;
+}
+
+h1#titre_login{
+    font-size: 1.9rem;
+    font-weight: 400;
+    color: var(--bkButton);
+    position: absolute;
+    top: 25px;
+}
+
+div.case_input{
+    display: flex;
+    flex-direction: column;
+
+}
+
+input#input_username,
+input#input_password{
+    height: 60px;
+    border: 1px solid var(--borderColorInput);
+    width: 25vw;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    font-family: var(--openSans);
+}
+
+div.case_button{
+    width: var(--width100);
+    display: flex;
+    justify-content: center;
+}
+
+div#case_show_password{
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+button#button_Login{
+    background-color: var(--bkButton);
+    border: none;
+    width: 10vw;
+    padding: 15px 25px;
+    text-transform: uppercase;
+    color: white;
+    font-family: var(--openSans);
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+div.case_forget,
+div.case_account{
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+div.case_forget a,
+div.case_account a{
+    text-decoration: none;
+    color: var(--bkButton);
+}
