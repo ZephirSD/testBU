@@ -8,7 +8,6 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Nom</th>
                 <th>Disponible</th>
                 <th>actions</th>
@@ -17,9 +16,8 @@
         <tbody>
         {% for ordinateur in ordinateurs %}
             <tr>
-                <td>{{ ordinateur.id }}</td>
                 <td>{{ ordinateur.nom }}</td>
-                <td>{{ ordinateur.disponible }}</td>
+                <td>{{ (ordinateur.disponible == 1) ? 'Oui' : 'Non' }}</td>
                 <td>
                     <a href="{{ path('app_ordinateur_show', {'id': ordinateur.id}) }}">show</a>
                     <a href="{{ path('app_ordinateur_edit', {'id': ordinateur.id}) }}">edit</a>

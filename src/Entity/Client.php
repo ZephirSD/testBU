@@ -24,7 +24,7 @@ class Client
     #[ORM\Column(length: 255)]
     private ?string $prenom = null;
 
-    #[ORM\OneToMany(mappedBy: 'idClient', targetEntity: Reservation::class)]
+    #[ORM\OneToMany(mappedBy: 'idClient', targetEntity: Reservation::class, orphanRemoval: true)]
     private Collection $reservations;
 
     public function __construct()
